@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Penpals account and connect with friends around the world.">
+    <title>Penpals - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: none; /* Hide error messages initially */
+        }
+
+        .terms {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script src="login.js" defer></script> <!-- Link to the JavaScript -->
+    
+</head>
+<body>
+
+<header>
+    <h1>Penpals - Acquainting people since 2006</h1>-
+    <p>Find friends around the world</p>
+</header>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="login-form" action="login_process.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <div class="error-message" id="username-error">Username does not exist</div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div class="error-message" id="password-error">Passwords don't match</div>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="error-message" id="general-error">Only letters, numbers, and space allowed. Minimum length is 6 characters.</div>
+
+    <p class="terms">
+        By using this site, you agree to our <a href="#">Terms of Service</a>. Advertisements, ads, and replies are owned by the poster. We cannot guarantee their accuracy or validity. We are not responsible for them or the content they link to in any way.
+    </p>
+</div>
+
+<footer>
+    <p>&copy; 2006 - 2021 Penpals. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

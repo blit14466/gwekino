@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiky - Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 16px;
+            margin: 0 4px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+
+        .notification-options {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .notification-options label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Messages</h2>
+
+    <h3>Received</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Email</th>
+                <th>Text</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cankan</td>
+                <td>Sure...</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <tr>
+                <td>femininomenon</td>
+                <td>It's called schn_.....</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <tr>
+                <td>Lizzieloo82</td>
+                <td>Lizzie...</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <tr>
+                <td>Blueanime</td>
+                <td>i don't really know b_.....</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <tr>
+                <td>newneptune</td>
+                <td>Yesss I love cats I'_.....</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <tr>
+                <td>Waajidah Bada</td>
+                <td>Merry Christmas 🎄🎁...</td>
+                <td>Some message text here...</td>
+                <td><button class="delete-btn">🗑</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <a href="#"><<<<</a>
+        <a href="#">1</a>
+        <a href="#">>>>> </a>
+    </div>
+
+    <div class="notification-options">
+        <label>Get notifications about new messages:</label>
+        <br>
+        <input type="checkbox" id="email-notifications" name="email-notifications">
+        <label for="email-notifications">Email</label>
+        <br>
+        <input type="checkbox" id="rss-notifications" name="rss-notifications">
+        <label for="rss-notifications">RSS</label>
+    </div>
+</div>
+
+</body>
+</html>

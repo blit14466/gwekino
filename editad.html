@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Ad - Kiky</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container textarea,
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Edit Your Ad - Kiky</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+    <a href="#">View</a>
+    <a href="#">Help</a>
+    <a href="#">Extras</a>
+    <a href="#">Edit Ad</a>
+    <a href="#">Your Ad</a>
+    <a href="#">Messages (0)</a>
+    <a href="#">Account</a>
+    <a href="#">Log Out</a>
+</nav>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Edit Ad Information</h2>
+        <p>You don't have to set these, but we highly recommend it.</p>
+
+        <form action="submit_edit_ad.html" method="POST">
+            <label for="email">Activate Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" value="blitzsean14@gmail.com">
+
+            <label for="basic">Basic Info:</label>
+            <input type="text" id="basic" name="basic" placeholder="Your name" value="TheSeanjames">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="6" placeholder="Describe yourself...">Please don't scroll, first give me 1 min
+✍️✍️✍️Nice to meet u dear website, how are u. My name is Sean I like to be called Sean James...
+</textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Your location" value="Unspecified">
+
+            <label for="interests">Interests:</label>
+            <input type="text" id="interests" name="interests" placeholder="Your interests" value="Literature, Movies/TV, Music, Computers/Internet, Sports, Animals, Nature, Crafts, Cooking, Languages, Travelling, Adventure, Chat, E-mail, Friendship, Flirt, Education, Games">
+
+            <label for="requirements">Requirements:</label>
+            <input type="text" id="requirements" name="requirements" placeholder="Your requirements" value="(Only members)">
+
+            <label for="languages">Languages:</label>
+            <input type="text" id="languages" name="languages" placeholder="Languages you speak" value="English, Spanish, Other, Chinese">
+
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo">
+
+            <label for="net">Net:</label>
+            <input type="text" id="net" name="net" placeholder="Your contact info or website link" value="https://chat.whatsapp.com/B5XyolSptBEIqaDb3K6OrX">
+
+            <label for="status">Status:</label>
+            <p>Your ad currently looks like this:</p>
+            <p><strong>Date:</strong> Thursday, 21. November 2024</p>
+            <p><strong>Name:</strong> TheSeanjames</p>
+            <p><strong>Email Address:</strong> blitzsean14@gmail.com</p>
+            <p><strong>Living in:</strong> <span>Unspecified</span></p>
+            <p><strong>Age:</strong> 17</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Homepage:</strong> <a href="https://chat.whatsapp.com/B5XyolSptBEIqaDb3K6OrX" target="_blank">Whatsapp Link</a></p>
+            <p><strong>Description:</strong> Please don't scroll, first give me 1 min ✍️✍️✍️ Nice to meet u...</p>
+            <p><strong>Interests:</strong> Literature, Movies/TV, Music, Computers/Internet, Sports, Animals...</p>
+            <p><strong>Languages:</strong> English, Spanish, Other, Chinese</p>
+            <p><strong>Requirements:</strong> (Only members)</p>
+
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kiky. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

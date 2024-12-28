@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiky - Penpal Website - Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .account-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="password"],
+        input[type="text"],
+        input[type="email"],
+        button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Kiky - Your Penpal World</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+    <a href="#">View</a>
+    <a href="#">Help</a>
+    <a href="#">Extras</a>
+    <a href="#">Edit Ad</a>
+    <a href="#">Your Ad</a>
+    <a href="#">Messages (0)</a>
+    <a href="#">Account</a>
+    <a href="#">Log Out</a>
+</nav>
+
+<div class="container">
+    <div class="account-section">
+        <h2>Account Settings</h2>
+
+        <!-- Change Password Form -->
+        <h3>Here you can change your password:</h3>
+        <form action="#" method="POST">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="repeat-password">Repeat password:</label>
+            <input type="password" id="repeat-password" name="repeat-password" required>
+
+            <button type="submit">Change Password</button>
+        </form>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button>Export Account Data</button>
+            <button>Remove Account</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kiky. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

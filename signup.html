@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penpals - Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .terms {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Penpals - Join Us</h1>
+    <p>Fill in the form below to join penpals.phk.at and post your own ad.</p>
+</header>
+
+<div class="container">
+    <h2>Create Your Account</h2>
+    <form action="signup_process.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <label for="repeat-password">Repeat Password</label>
+        <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat your password" required>
+
+        <div class="error-message" id="password-mismatch-error">Passwords do not match</div>
+
+        <label>
+            <input type="checkbox" name="terms" required>
+            I confirm that I read and agree to the <a href="#">Terms of Service</a>.
+        </label>
+
+        <label>
+            <input type="checkbox" name="age" required>
+            I confirm that I am at least 16 years old.
+        </label>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <div class="error-message" id="general-error">Please fill out all required fields correctly.</div>
+</div>
+
+<footer>
+    <p>&copy; 2006 - 2021 Penpals. All rights reserved.</p>
+</footer>
+
+</body>
+</html> 
