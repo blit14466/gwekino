@@ -77,7 +77,7 @@
     <h2>Messages</h2>
 
     <h3>Received</h3>
-    <table>
+    <table id="messagesTable">
         <thead>
             <tr>
                 <th>Sender</th>
@@ -87,43 +87,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Cankan</td>
-                <td>Sure...</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <tr>
-                <td>femininomenon</td>
-                <td>It's called schn_.....</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <tr>
-                <td>Lizzieloo82</td>
-                <td>Lizzie...</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <tr>
-                <td>Blueanime</td>
-                <td>i don't really know b_.....</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <tr>
-                <td>newneptune</td>
-                <td>Yesss I love cats I'_.....</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <tr>
-                <td>Waajidah Bada</td>
-                <td>Merry Christmas 🎄🎁...</td>
-                <td>Some message text here...</td>
-                <td><button class="delete-btn">🗑</button></td>
-            </tr>
-            <!-- Add more rows as needed -->
+            <!-- Dynamic rows will be appended here by JavaScript -->
         </tbody>
     </table>
 
@@ -144,5 +108,40 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const messages = [
+            { sender: 'Cankan', email: 'Sure...', text: 'Some message text here...' },
+            { sender: 'femininomenon', email: 'It\\'s called schn_.....', text: 'Some message text here...' },
+            { sender: 'Lizzieloo82', email: 'Lizzie...', text: 'Some message text here...' },
+            { sender: 'Blueanime', email: 'i don\\'t really know b_.....', text: 'Some message text here...' },
+            { sender: 'newneptune', email: 'Yesss I love cats I_.....', text: 'Some message text here...' },
+            { sender: 'Waajidah Bada', email: 'Merry Christmas 🎄🎁...', text: 'Some message text here...' }
+        ];
+
+        const tableBody = document.querySelector('#messagesTable tbody');
+
+        messages.forEach(message => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${message.sender}</td>
+                <td>${message.email}</td>
+                <td>${message.text}</td>
+                <td><button class="delete-btn">🗑</button></td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+
+        tableBody.addEventListener('click', function (event) {
+            if (event.target.classList.contains('delete-btn')) {
+                const row = event.target.closest('tr');
+                row.remove();
+            }
+        });
+    });
+</script>
+
 </body>
-</html>
+    </html>
